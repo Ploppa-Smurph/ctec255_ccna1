@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Packet Tracer 02: Exploring Networking with Cisco Packet Tracer</title>
+</head>
+<body>
+<h1>Cisco Packet Tracer 02: Exploring Networking with Cisco Packet Tracer</h1>
+<pre>
+<h2>Module 1: Set Up Your Small Office Network</h2>    
+<h3>1.0 Introduction</h3>
+<h4>1.0.1 Welcome to Exploring Networking with Cisco Packet Manager</h4>
+<h4>1.0.2 First Time in the Course</h4>
+<h4>1.0.3 Why Should I Take this Course</h4>
+<h3>1.1 Connect Devices using Wireless Technologies</h3>
+<h4>1.1.1 Video - Topology Overview</h4>
+    Packet Tracer's 'Physical' view allows us to see devices in homes or offices 
+      we can also zoom in on wiring and cabling of devices 
+<h4>1.1.2 Structured Cabling</h4>
+    in packet tracer 'Physical' mode we will organize cabling, wall plates, bendpoints, and cable color
+<h4>1.1.3 Video - Structured Cabling in the Physical Workspace and Cabling Devices in a Rack</h4>
+    there are copper patch panels and wall mounts available in packet tracer
+    also, fiber patch panels and wall mounts available
+
+    create 'bendpoints' to organize the cable so it doesn't run across desktops
+<h4>1.1.4 Packet Tracer - Create Realistic Structured Cabling in the Physical Workspace and Cabling Devices in a Rack</h4>
+    packet tracer Activity
+    - Part 1: Install a Patch Panel in the Wiring Closet
+    - Part 2: Attach a Wall Mount in the Office
+    - Part 3: Connect an Additional Wall Mount and Cables
+<h4>1.1.5 Connect Devices using Wired and Wireless Technologies</h4>
+    Wifi
+    bluetooth
+    cellular
+<h4>1.1.6 Packet Tracer - Connect Devices using Wireless Technologies</h4>
+    packet tracer Activity
+     - Part 1: Connect a Laptop to the Office WLAN
+     - Part 2: Connect Devices with Bluetooth Technology
+     - Part 3: Tether a Laptop to use a Cellular Network via the Smartphone
+<h4>1.1.7 Video Explore Device Configuration Using the CLI (console)</h4>
+        configuring devices from the CLI using Cisco's Internetwork Operating System
+
+     router and switches use CLI often -- 
+     device opens in 'User Exec' mode 
+       'enable'              = enter privilage mode   
+       '?'                   = get list of commands available in current mode
+       'configure terminal'  = enter configuration mode to make configuration changes to the device
+       'end'                 = leave configuration mode
+           after making any configuration changes you MUST save the changes for the next startup
+       'copy running-config startup-config'  
+<h4>1.1.8 Packet Tracer - Explore Device Configuration Using the CLI (console)</h4>
+        - Part 1: Connect to the Device Using a Console Connection
+        - Part 2: Copy Configuration Information to the Device
+        - Part 3: Save the Updated Configuration to the Device
+<h2>Module 2: Manage and Monitor Your Branch Office Network</h2>    
+<h3>2.0 Structured Wiring / PT Simulation</h3>
+<h4>2.0.1 Packet Tracer Simulation Mode</h4>
+        in simulation mode you can slow the data traffic down and observe 1 packet at a time
+      ** capturing and viewing PDU's can be used to verify connectivity, functionality, and troubleshoot issues.
+        -- captured PDU's can be viewed in OSI Model mode
+<h4>2.0.2 Video - Packet Tracer Network Simulation Mode</h4>
+        realtime mode - traffic moves quickly
+        simulation mode - can slow down time to see the packet move from location to location
+         
+        can filter and view only packets that you want to view
+
+       on toolbar you can 'Create Complex PDU' 
+<h4>2.0.3 Packet Tracer - Examine Packets in the Small Office</h4>
+    Packet Tracer activity -- 'Simulation mode' only works in 'Logical' mode 
+        - Part 1: Create a Simple PDU in Simulation Mode
+        - Part 2: View Contents of PDUs
+        - Part 3: Create a Complex PDU in Simulation Mode
+<h4>2.0.4 Video - Create, Arrange, Uncluster, Delete, and Connect Clusters</h4>
+        clustering lets you combine devices into a single cloud icon to simplify topology appearance 
+
+       allows user to group devices for easier viewing, can uncluster by deleting, there will be an option to 'uncluster' 
+<h4>2.0.5 Edit and Annotate a Topology</h4>
+        it is important to properly document network design and to note any modifications that are made to the network.
+        
+    design is an iterative process
+<h4>2.0.6 Video - Edit and Annotate a Topology</h4>
+       can add photos for use for topology backgrounds -- fun
+<h4>2.0.7 Packet Tracer - Edit Toplogies</h4>
+    Packet Tracer activity
+        - Part 1: Add an Additional Switch to the Rack in the Office Network
+        - Part 2: Connect a PC to the Office Network
+        - Part 3: Work with Clusters
+        - Part 4: Add a Second Home Cluster to the Network
+
+<h3>2.1 Network Controller</h3>
+<h4>2.1.1 the Network Controller</h4>
+access the Network Controller interface by connecting a web browser to the IP address of the Network Controller management interface
+
+<h4>2.1.2 Video - the Network Controller</h4>
+network controller - orchastrates network function 
+  maintain inventory of devices and their status
+  automates device configuration and updates 
+  analyzes network operations
+  identifying potential security issues
+  suggesting possible remediation
+
+dashboard    - quick view of current health of network
+provisioning - shows list of network devices currently connected
+        - Network Device - shows the currently connected devices
+        - Discovery      - scans for additional devices
+        - Credentials    - 
+assurance    - more detailed dashboard view of device network health 
+        - Assurance  - default detailed device dashboard view
+        - Hosts      - 
+        - Topology   - view interactive topology map 
+        - Path Trace - shows the path data takes between devices 
+Policy       - 
+API Docs     -  interface with and program additional capabilities 
+
+<h4>2.1.3 Packet Tracer - Monitor Your Network Using a Network Controller</h4>
+     Packet Tracer activity
+
+        - Part 1: Implement a Network Controller
+        - Part 2: Monitor the Network
+
+<h4>2.1.4 Video - Monitor network Changes using a Network Controller</h4>
+    networks controllers offer a centralized GUI to manage multiple network devices
+
+   add the rights to check devices on the network with 'Credentials' under the 'Provisioning menu'
+<h4>2.1.5 Packet Tracer - Manage and Configure your Network using a Network Controller</h4>
+    Packet Tracer activity 
+       - Part 1: Implement a Network Controller
+       - Part 2: Device Discovery
+       - Part 3: Add a New Network Device in the Office Network
+<h3>2.2 Course Summary</h3>
+<h4>2.2.1 Packet Tracer Tutored Activity - Troubleshoot a Wireless Connection</h4>
+
+
+<h4>2.2.2 Summary of this Course</h4>
+
+</pre>    
+</body>
+</html>
