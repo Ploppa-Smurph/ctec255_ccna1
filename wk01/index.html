@@ -409,17 +409,65 @@
             <b>Sw-Floor-1(config-line)#</b><i>login</i>
             <b>Sw-Floor-1(config-line)#</b><i>end</i> or Ctrl+Z
             <b>Sw-Floor-1#</b>
-
-
 <h3>2.4.4 Encrypt Passwords</h3>
+        must encrypt plaintext passwords (both 'startup-config' and 'running-config' display passwords as plaintext)
+         Encrypt passwords:
+             <b>Sw-Floor-1#</b><i>configure terminal</i>    
+             <b>Sw-Floor-1(config)#</b><i>service password-encryption</i>    
+             <b>Sw-Floor-1(config)#</b><i>exit</i>    
+             <b>Sw-Floor-1#</b><i></i> 
+        use 'show running-config' command to verify passwords on device are encrypted
+             <b>Sw-Floor-1#</b><i>show running-config</i>        
 <h3>2.4.5 Banner Messages</h3>
+      MOTD (Message of the Day)
+      <b>Delimiting character</b> - a character entered before a message in the command syntax -- in this ex: '$' is the delimiting character 
+
+      to set the Banner Message:
+             <b>Sw-Floor-1#</b><i>configure terminal</i>
+             <b>Sw-Floor-1(config)#</b><i>banner motd $Authorized Access Only!$</i>
+
+         when a user tries to access the device the message will display before verification
+
+    does not add security to device, but adds the legal security that a warning was posted in case an unauthorized person accesses the device     
 <h3>2.4.6 Video - Secure Administrative Access to a Switch</h3>
+        - Access command line to secure switch 
+                       > 'config term'
+               
+        - Secure access to console port
+                (config)# 'line console 0'
+                (config-line)# 'password cisco'      -- sets password for 'user EXEC' mode   
+                (config-line)# 'login'               -- requires password when entering 'user EXEC' mode
+                (config-line)# 'exit'
+                (config)# 'enable secret class'      -- secure access to 'priveleged EXEC' mode
+                hit 'Ctrl+C' to get back to 'priveleged EXEC' mode 
+
+
+        - Secure virtual terminal acces for remote access
+        - Encrypt passwords on switch
+        - Configure banner message
+        - Verify security changes
 <h3>2.4.7 Syntax Checker - Basic Device Configuration</h3>
 <h3>2.4.8 Check Your Understanding - Basic Device Configuration</h3>
-
 <h2>2.5 Save Configurations</h2>
 <h3>2.5.1 Configure Files</h3>
+        - Startup-config -- stored in NVRAM (non-volatile RAM), contains commands used by device upon startup
+        - Running-config -- stored in RAM, reflects current configuration. Modifying configuration affects operation IMMEDIATELY
+                        if the running config is changed, but NOT saved it will go away if the device is powered down  
+
+         to save the running-configuration: 
+           'copy running-config startup-config' 
+         or simply - 'copy run start' while in privileged EXEC mode               
 <h3>2.5.2 Alter the Running Configuration</h3>
+        if changes DO NOT have the desired effect and the running-config has not been saved to startup-config yet
+         you CAN restore the default startup-config settings by using the 'reload' command
+
+        'reload' it is similar to doing a soft reboot and will reset all user connections to the router
+
+        if undesired changes WERE saved to startup-config, user can erase all configurations by using command: 
+
+        'erase startup-config'   -- after erasing then 'reload' device to clear running-config file from RAM
+        
+        
 <h3>2.5.3 Video - Alter the Running Configuration</h3>
 <h3>2.5.4 Capture Configuration to a Text File</h3>
 <h3>2.5.5 Packet Tracer - Configure Initial Switch Settings</h3>
