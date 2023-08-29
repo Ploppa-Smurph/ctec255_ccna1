@@ -481,15 +481,32 @@
         IPv4 - 32-bit value - 4 octets presented in 'dotted decimal notation'
          ex: 192.168.0.1
         
+        IPv6 - 128 bit address - hexadecimal value - ??6 hexadecimal sets?? seperated by ':'
+          ex: 2001:db8:acad:10::10   
+        
         default gateway is the IP of the router that the host uses to access remote networks (including the internet)
 <h3>2.6.2 Interfaces and Ports</h3>
-<h3>2.6.3 Check Your Understanding - Ports and Addresses</h3>
+        media types: copper, fiber, wireless
 
+        interfaces connect to the media, different ports for different interfaces.
+<h3>2.6.3 Check Your Understanding - Ports and Addresses</h3>
 <h2>2.7 Configure IP Addressing</h2>
 <h3>2.7.1 Manual IP Address Configuration for End Devices</h3>
+        windows -> control panel -> network sharing center -> change adapter settings -> right click and select 'Properties' > displays Local Area Connection
+         - click 'Properties' to open the Internet Protocol Version 4 (TCP/IPv4) Properties
 <h3>2.7.2 Automatic IP Address Configuration for End Devices</h3>
 <h3>2.7.3 Syntax Checker - Verify Windows PC IP Configuration</h3>
 <h3>2.7.4 Switch Virtual Interface Configuration</h3>
+        to acces a switch remotely we must set the IP address and subnet mask for the SVI 
+
+         configure SVI on switch: 
+          - enter command 'interface vlan 1' in global configuration mode
+          - assign IPv4 address using 'ip address' command (user provides IP-address and subnet-mask)
+          - enable the virutal interface using 'no shutdown' command
+             <b>Switch# </b><i>configure terminal</i> 
+             <b>Switch(config)# </b><i>interface vlan 1</i> 
+             <b>Switch(config-if)# </b><i>ip address 192.168.1.20 255.255.255.0</i> 
+             <b>Switch(config-if)# </b><i>no shutdown</i>     --- turns the port on -- to turn off then type 'shutdown'
 <h3>2.7.5 Syntax Checker - Configure a Virtual Interface</h3>
 <h3>2.7.6 Packet Tracer - Implement Basic Connectivity</h3>
 
@@ -501,9 +518,23 @@
 <h3>2.9.1 Packet Tracer - Basic Switch and End Device Configuration</h3>
 <h3>2.9.2 Lab - Basic Switch and End Device Configuration</h3>
 <h3>2.9.3 What Did I Learn in this Module</h3>
+        - All end devices and network devices require an OS
+        - Cisco IOS separates management access int 2 command modes:
+           - user EXEC
+           - privileged EXEC
+        - Golbal configuration mode is accessed before other specific configuration modes
+        - Each IOS command has a specific format (syntax) and can only be executed in the appropriate mode  
+        - Basic device configurations: 
+           - hostname
+           - password 
+           - encrypt password
+           - banner
+        - 2 system files that store device configuration: 
+           - startup-config
+           - running-config
+        - IP addresses enable devices to locate one another and establish end-to-end communication. 
+            Each end device on a network is configured with an IP address
 <h3>2.9.4 Module Quiz - Basic Switch and End Device Configuration</h3>
-
-
 </pre>    
 </body>
 </html>
