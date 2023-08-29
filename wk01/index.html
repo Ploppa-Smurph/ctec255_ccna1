@@ -300,13 +300,29 @@
         Interface Configuration   - ex: <i>Switch(config-if)#</i>
              used to configure a switch, port, or router interface   
 <h3>2.2.3 Video - IOS CLI Primary Command Modes</h3>
-        User EXEC Mode
+        User EXEC Mode '>' -- very little privilege;
+                type 'enable' to go to Privileged Exec Mode 
 
-        Privilege EXEC Mode 
+        Privileged EXEC Mode '#'  -- more commands available 
+                type 'configure terminal' to configure the device
 
-        Global Config Mode
+        Global Config Mode '(config)#' -- allows you to configure devices 
+                type 'interface' to go into configure interface mode (config-if)#
 <h3>2.2.4 Navigate Between IOS Modes</h3>
+        enable
+        exit
+        line == goes into line configuration mode 
+          ex: Switch(config)# <i>line console 0</i>
+              Switch(config-line)# <i>exit</i>
+              Switch(config)#  
 <h3>2.2.5 Video - Navigate Between IOS Modes</h3>
+        enable  - 
+        disable - 
+        exit    - 
+        end     - 'ctrl-z', returns to Privilege EXEC mode  
+        line console 0   - 
+        line vty 0 15    - virtual terminal management 
+        interface vlan 1 -
 <h3>2.2.6 A Note about Syntax Checker Activities</h3>
 <h3>2.2.7 Syntax Checker - Navigate Between IOS Modes</h3>
 <h3>2.2.8 Check Your Understanding - IOS Navigation</h3>
