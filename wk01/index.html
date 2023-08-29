@@ -274,14 +274,37 @@
 <h3>2.1.4 Access Methods</h3>
         Console            - physical managment port used to access device  
         SSH (Secure Shell) - secure remote connection through virtual interface 
-        Telnet             - establishes an insecure remote CLI  
+        Telnet             - establishes an insecure remote CLI; unsecure, uses 'plain-text'  
+
+        out-of-band - does not need network connectivity; the Console connection is an out-of-band connection
+        in-band     - need network connectivity 
 <h3>2.1.5 Terminal Emulation Programs</h3>
+        PuTTY, Tera Term, SecureCRT
 <h3>2.1.6 Check Your Understanding - Cisco IOS Access</h3>
 
 <h2>2.2 IOS Navigation</h2>
 <h3>2.2.1 Primary Command Modes</h3>
+       User EXEC Mode       - ex: <i>Router ></i>  -- has '>' symbol as prompt
+          limited number of basic monitoring commands
+       
+       Priviliged EXEC Mode - ex: <i>Switch #</i>  -- has '#' symbol as prompt
+          aka 'Enabled Mode', allows access to all comands and features
+          type 'Enable' to get into this mode, that is why some people call it enabled mode
 <h3>2.2.2 Configuration Mode and Subconfiguration Mode</h3>
+        Golbal Configuration Mode - ex: <i>Switch(config)#</i> 
+             used to configure options on the device
+        
+        Line Configuration Mode   - ex: <i>Switch(config-line)#</i>
+             used to configure Console, SSH, Telnet, or AUX access
+             
+        Interface Configuration   - ex: <i>Switch(config-if)#</i>
+             used to configure a switch, port, or router interface   
 <h3>2.2.3 Video - IOS CLI Primary Command Modes</h3>
+        User EXEC Mode
+
+        Privilege EXEC Mode 
+
+        Global Config Mode
 <h3>2.2.4 Navigate Between IOS Modes</h3>
 <h3>2.2.5 Video - Navigate Between IOS Modes</h3>
 <h3>2.2.6 A Note about Syntax Checker Activities</h3>
