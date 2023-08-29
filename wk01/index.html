@@ -375,7 +375,42 @@
               <b>Switch(config)# </b><i>hostname Sw-Floor-1</i>
               <b>Sw-Floor-1(config) #</b> 
 <h3>2.4.2 Password Guidelines</h3>
+        make certain to change default password of devices
 <h3>2.4.3 Configure Passwords</h3>
+    Securing 'user EXEC' mode access: 
+      1) enter line console configuration mode using 'line console 0' command
+      2) specify user EXEC mode password using 'password' command
+      3) enable user EXEC access using the 'login' command
+              <b>Sw-Floor-1# </b><i>configure terminal</i>
+              <b>Sw-Floor-1(config)# </b><i>line console 0</i>
+              <b>Sw-Floor-1(config-line)# </b><i>password cisco</i>
+              <b>Sw-Floor-1(config-line)# </b><i>login</i>
+              <b>Sw-Floor-1(config-line)# </b><i>end</i>
+              <b>Sw-Floor-1# </b><i></i>
+
+    Securing 'privileged EXEC' mode access:           
+              <b>Sw-Floor-1# </b><i>configure terminal</i>
+              <b>Sw-Floor-1# </b><i>enable secret class</i>
+              <b>Sw-Floor-1# </b><i>exit</i>
+
+   the 'secret' command will hash out the password and make it more secure
+      use secret instead of password for low level encryption
+
+   <b>VTY</b> lines enable 16 remote connections to the device using either Telnet or SSH.
+        these lines are numbered 0 - 15
+
+   Securing VTY line access:
+       - 1st: Enter line VTY configuration mode using 'line vty 0 15'
+       - 2nd: Specify VTY password using 'password' command 
+       - 3rd: enable VTY access using 'login' command
+            <b>Sw-Floor-1#</b><i>configure terminal</i>
+            <b>Sw-Floor-1(config)#</b><i>line vty 0 15</i>
+            <b>Sw-Floor-1(config-line)#</b><i>password cisco</i>
+            <b>Sw-Floor-1(config-line)#</b><i>login</i>
+            <b>Sw-Floor-1(config-line)#</b><i>end</i> or Ctrl+Z
+            <b>Sw-Floor-1#</b>
+
+
 <h3>2.4.4 Encrypt Passwords</h3>
 <h3>2.4.5 Banner Messages</h3>
 <h3>2.4.6 Video - Secure Administrative Access to a Switch</h3>
