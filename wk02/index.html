@@ -112,14 +112,44 @@
         AppleTalk - Proprietary Apple Suite - not really used anymore
         Novell NetWare - Proprietary Suite from Novell - not very common
         
-        the TCP/IP Layer: 
+        the TCP/IP Layer of the TCP/IP model / DOD Model: 
             Application Layer of TCP/IP   = HTTP, DNS, DHCP, FTP
             Transport Layer of TCP/IP     = TCP, UDP
             Internet Layer of TCP/IP      = IPv4 & IPv6, ICMPv4, ICMPv6 
             Network Access Layer          = Ethernet, ARP, WLAN   
 <h3>03.3.3 TCP/IP Protocol Example</h3>
+      TCP/IP protocols operate at application, transport, and internet layers
+        - the most common network access layer LAN protocols are Ethernet and WLAN (Wireless LAN)
+
+     Application Layer: Hypertext Transfer Protocol (HTTP)
+     Transport Layer  : Transmission Control Protocol (TCP)
+     Internet Layer   : Internet Protocol (IP)
+     Network Access   : Ethernet   
 <h3>03.3.4 TCP/IP Protocol Suite</h3>
+        TCP/IP is: 
+         - an open standard protocol suite that is freely available to the public and can be used by any vendor
+         - a standards-based protocol suite that is endorsed by the networking and approved by a standards organization to ensure interoperability
+
+        <b>Application Layer</b>
+           - Name System   = DNS
+           - Host Config   = DHCPv4; DHCPv6; SLAAC
+           - Email         = SMTP; POP3; IMAP
+           - File Transfer = FTP; SFTP; TFTP
+           - Web Service   = HTTP; HTTPS; REST
+        <b>Transport Layer</b>
+           - Connection-Oriented = TCP
+           - Connectionless      = UDP 
+        <b>Internet Layer</b>
+           - Internet Protocol  = IPv4; IPv6; NAT
+           - Messaging          = ICMPv4; ICMPv6; ICMPv6 ND
+           - Routing Protocols  = OSPF; EIGRP; BGP
+        <b>Network Access Layer</b>
+           - Address Resolution = ARP
+           - Data Link Protocol = Ethernet; WLAN          
 <h3>03.3.5 TCP/IP Communication Process</h3>
+        web server encapsulates message and sends to the client de-encapsulates the information
+
+        Ethernet Frame -> IP Packet -> TCP Segment -> User Data
 <h3>03.3.6 Check Understanding of Protocol Suites</h3>
 
 <h2>03.4 Standards Organizations</h2>
