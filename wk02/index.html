@@ -40,16 +40,21 @@
     Encoding -  process of converting information into another acceptable form for transmission
       Message Source -> Encoder -> Transmitter -> Transmission Medium -> Receiver -> Decoder -> Message Destination
 <h3>03.1.7 Message Formatting and Encapsulation</h3>
+    Formatting depends on type of message and channel used to deliver message
 <h3>03.1.8 Message Size</h3>
      the message is broken down into 'Frames' of smaller size and transmitted that way
+       - destination host 'decodes' the received information -- destination host interprets the message
 <h3>03.1.9 Message Timing</h3>
     - Flow Control: defines how much information and the speed at which it can be delivered  
     - Response Timeout: specifies how long to wait for response and what action to take if a response timeout occurs
     - Access Method: determines when messages can be sent to avoid 'collision of information'
+           - Proactive protocols attempt to prevent collisions
+           - Reative protocols establish a recovery method after the collision occurs
 <h3>03.1.10 Message Delivery Options</h3>
     - unicast: transmitted to a single end device
     - multicast: sendss to one or more end devices 
-    - broadcast: sends to ALL end devices
+    - broadcast: sends to ALL end devices (not available on IPv6)
+    - anycast: available on IPv6
 <h3>03.1.11 Note about the Node Icon</h3>
     nodes are illustrated as circles throughout the course
 <h3>03.1.12 Check Understanding</h3>
@@ -59,12 +64,46 @@
       -- formatting 
 <h2>03.2 Protocols</h2>
 <h3>03.2.1 Network Protocol Overview</h3>
-<h3>03.2.2 Network Protocol Functions</h3>
-<h3>03.2.3 Protocol Interactoin</h3>
-<h3>03.2.4 Check Understanding of Protocols</h3>
+       Protocols - rules on how we communicate
+       Network Protocols - define a common set of rules that can be implemented on
+          - Software
+          - Hardware
+          - Both
+        Protocols have their own:
+          - Function
+          - Format
+          - Rules
 
+      <b>Network Communication Protocol</b> - enable 2 or more devices to communicate over 1 or more networks
+      <b>Network Security</b> - secure data to provide authentication, data integrity, and data encryption 
+      <b>Routing</b> - enable routers to exchange route information, compare path information and select best path
+      <b>Service Discovery</b> - used for automatic detection of devices or services  
+<h3>03.2.2 Network Protocol Functions</h3>
+      Protocols may have 1 or more functions
+       <b>FUNCTION</b>                       <b>DESCRIPTION</b>
+       <b><i>Addressing</i></b>             - Identifies sender and receiver
+       <b><i>Reliability</i></b>            - Provides guranteed delivery
+       <b><i>Flow Control</i></b>           - Ensures data flows at an efficient rate
+       <b><i>Sequencing</i></b>             - Uniquely labels each transmitted segment of data 
+       <b><i>Error Detection</i></b>        - Determines if data became corrupted during transmission
+       <b><i>Application Interface</i></b>  - Process-to-Process communications between network applications
+<h3>03.2.3 Protocol Interaction</h3>
+    Networks require the use of several protocols each with a unique function and format:
+
+    <b>Hypertext Transfer Protocol (HTTP)</b>  - Governs way web server and web client interact; defines content and format
+    <b>Transmission Control Protocol (TCP)</b> - Manages individual conversations; Provides guranteed delivery; Manages flow control
+    <b>Internet Protocol (IP)</b>              - Delivers messages globally for the sender to receiver
+    <b>Ethernet</b>                            - Delivers messages from 1 NIC to another NIC on the same Ethernet Local Area Network (LAN) 
+<h3>03.2.4 Check Understanding of Protocols</h3>
+        <b>BGP</b> and <b>OSPF</b> are examples of which type of protocols?
+           -- BGP and OSPF are routing protocols, they enable routers to exchange route information to reach remote networks
 <h2>03.3 Protocol Suites</h2>
 <h3>03.3.1 Network Protocol Suites</h3>
+        Network Protocol Suites are inter-related protocols grouped together to perform a communication function
+
+        Protocol Stacks - help visualize how protocols within a suite are implemented
+          lower layer protocols are concerned with moving data 
+          higher layer protocols are focused on the content of the message being sent
 <h3>03.3.2 Evolution of Protocol Suites</h3>
 <h3>03.3.3 TCP/IP Protocol Example</h3>
 <h3>03.3.4 TCP/IP Protocol Suite</h3>
