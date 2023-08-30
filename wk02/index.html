@@ -170,9 +170,47 @@
 
 <h2>03.5 Reference Models</h2>
 <h3>03.5.1 Benefits of Using a Layered Model</h3>
+        allows user to explain and understand how data is handled in a network
+        -- OSI Model and TCP/IP Model
 <h3>03.5.2 OSI Reference Model</h3>
+       Please Do Not Throw Sausage Pizza Away (01 - 07 acronym)
+        07 - Application   \
+        06 - Presentation   |--> HTTP, DNS, DHCP, FTP
+        05 - Session       /
+        04 - Transport       --> TCP, UDP
+        03 - Network         --> IPv4, IPv6, ICMPv4, ICMPv6     -- router = Layer 3 (Network) device    {multi-layer switch is layer 3 device}
+        02 - Data Link    \                                     -- switch = Layer 2 (Data Link) device  {multi-layer switch is layer 3 device}
+        01 - Physical     /  --> Ethernet, WLAN, SONET, SDH
+
+        7 Application  = Protocols used for process-to-process communication                                         =   
+        6 Presentation = Provides common representation of data transferred between application layer services       =    
+        5 Session      = Provides services to the presentation layer and to manage data exchange                     =    
+        4 Transport    = Defines services to segment, transfer, and reassemble the data for communication            = segementation & reassembly
+        3 Network      = Provides services to exchange individual pieces of data over the network                    = IP address   
+        2 Data Link    = Describes methods for exchanging data frames over a common media                            = MAC address 
+        1 Physical     = Describes means to activate, maintain, and de-activate physical connections                 = wiring  
 <h3>03.5.3 TCP/IP Protocol Model</h3>
+        04 - Application     --> HTTP, DNS, DHCP, FTP
+        03 - Transport       --> TCP, UDP
+        02 - Internet        --> IPv4, IPv6, ICMPv4, ICMPv6
+        01 - Network Access  --> Ethernet, WLAN, SONET, SDH
+
+        4 Application    = Represents data to user, plus encoding and dialog control
+        3 Transport      = Supports communication between various devices across diverse networks
+        2 Internet       = Determines best path through the network
+        1 Network Access = Controls hardware devices and media that make up the network 
 <h3>03.5.4 OSI and TCP/IP Model Comparison</h3>
+        - TCP/IP suite does not specify which protocols to use when transmitting over a physical medium
+        - OSI Layer 1 (Physical) and Layer 2 (Data Link) discuss the necessary procesures to access the media and physical means to send data over a network
+
+          <b>OSI</b>                <b>TCP/IP</b> 
+        7 Application     \
+        6 Presentation     |   =     4 Application
+        5 Session         /
+        4 Transport            =     3 Transport
+        3 Network              =     2 Internet 
+        2 Data Link       \      
+        1 Physical        /    =     1 Network Access
 <h3>03.5.5 Packet Tracer - Investigate TCP/IP and OSI Models in Action</h3>
 
 <h2>03.6 Data Encapsulation</h2>
