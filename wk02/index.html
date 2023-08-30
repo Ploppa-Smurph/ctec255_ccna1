@@ -215,17 +215,65 @@
 
 <h2>03.6 Data Encapsulation</h2>
 <h3>03.6.1 Segmenting Messages</h3>
+        2 major benefits: 
+         - Increase speed - large amounts of data can be sent over the network without tying up the communication link
+         - Increase efficiency - only segments which fail to reach the destination need to retransmitted, no the entire data stream
 <h3>03.6.2 Sequencing</h3>
+         process of numbering data segments so that the message may be reassebled at the destination
+
+         ** TCP is responsible for sequencing the individual segments
 <h3>03.6.3 Protocol Data Units</h3>
+        Encapsulation = process where protocols add their information to the data 
+
+        PDUs passing down the stack are: 
+           1) Data (Data Stream)
+           2) Segment
+           3) Packet
+           4) Frame
+           5) Bits (Bit Stream)
+
+    in the example we send an email at top layer; as we travel through the model each layer adds a header to the data
+        Email data is typed and ready to send     == 1) Data (Data Stream)
+        Segment (2) adds 'Transport Header'       == 2) Segment
+        Packet (3) adds 'Network Header'          == 3) Packet
+        Frame (4) adds 'Frame Header' & 'Trailer' == 4) Frame
+        data streams as bits (5)                  == 5) Bits (Bit Stream)
 <h3>03.6.4 Encapsulation Example</h3>
+        Encapsulation is a top-down process
+          the level above does its process and then passes it down to the next level of the model 
+             this process is repeated by each layer until it is sent out as a bit stream
 <h3>03.6.5 De-encapsulation Example</h3>
+        data is de-encapsulated as it moves up the stack
 <h3>03.6.6 Check Understanding of Data Encapsulation</h3>
 
 <h2>03.7 Data Access</h2>
 <h3>03.7.1 Addresses</h3>
+        - Network Layer Source and Destination Addresses   - responsible for delivering the IP packet from source to destination
+        - Data Link Layer Source and Destination Addresses - Responsible for delivering data link frame from one NIC to another NIC on the same Network
 <h3>03.7.2 Layer 3 Logical Address</h3>
+        IP packet contains 2 IP addresses: 
+          - Source IP      == IP of the sender
+          - Destination IP == IP of the receiving device
+
+       IP addresses have a Host Portion and a Network Portion 
+         - network portion is the left-most part of the address
+         - host portion is the remaining part of the address and identifies a specific device with the group
 <h3>03.7.3 Devices on the Same Network</h3>
+        Data Link Layer == Destination, then source
+        Network Layer   == Source, then destination
+         -devices on the same network will have the same numbers in the 'network' portion of the address
+          ex: PC1 = 192.168.1.110  
+              FTP = 192.168.1.9    
+
+         both PC1 and FTP are part of the same network -- 192.168.1  
 <h3>03.7.4 Role of the Data Link Layer Addresses: Same IP Network</h3>
+        if devices are on the same network, the Data Link frame will use the actual MAC address of the destination NIC
+
+        MAC addresses are physically embedded into the Ethernet NIC and are 'local addressing' 
+          - source MAC is that of the originator 
+          - destination MAC address will be on the same link as the source ??
+          ** source and destination of MAC address changes as it moves across devices
+             ** destination and source IP addresses remain the same, but destination and source MAC addresses change as they move to new devices 
 <h3>03.7.5 Devices on a Remote Network</h3>
 <h3>03.7.6 Role of the Network Layer Addresses</h3>
 <h3>03.7.7 Role of the Data Link Layer Addresses: Different IP Networks</h3>
@@ -236,6 +284,35 @@
 
 <h2>03.8 Module Practice and Quiz</h2>
 <h3>03.8.1 What Did I Learn?</h3>
+       <b>The Rules</b>
+          - Protocols must have a sender and receiver
+          - Common protocols include these requirements: 
+              - Message encoding
+              - Formatting and encapsulation
+       <b>Protocols</b>
+          - to send data across the network requires the use of several protocols
+          - each protocol has it's own function, format, and rules for communication
+       <b>Protocol Suites</b>
+          - protocol suite is a group of inter-related protocols
+          - TCP/IP is an example
+       <b>Standards Organizations</b>        
+          - Open standards encourage interoperability, competition, and innovation
+       <b>Reference Models</b> 
+          - 2 models used in networking are TCP/IP model & OSI model
+          - TCP/IP has 4 layers; OSI has 7 layers
+       <b>Data Encapsulation</b>
+          - the form that a piece of data takes at any layer is called a PDU (Protocol Data Unit)
+          - 5 different PDUs in data encapsulation: 
+              - Data
+              - Segment
+              - Packet
+              - Frame
+              - Bits
+       <b>Data Access</b>
+          - Network and Data Link Layers provide addressing to move data through the network
+          - Layer 3 provides IP addressing  (Network Layer 3)
+          - Layer 2 provides MAC addressing (Data Link Layer 2)
+          - Layers handle addressing differently depending on whether the source and destination are on the same network, or not          
 <h3>03.8.2 Module Quiz - Protocols and Models</h3>
 
 </pre>
