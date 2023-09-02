@@ -162,7 +162,16 @@
 
         RJ-45 connector -- pin 1 on left hand side / pin 8 on far right (tab facing down)
 <h4>4.4.3 Straight-Through and Crossover UTP Cables</h4>
-        T568-A or T568-B  (T568-B is more common) 
+        T568-A or T568-B  (T568-B is more common) -- will need to memorize
+          -- both A & B start at pin 1 with a stripe 
+           A = stripe green  -> pin 1                 B = stripe orange   -> pin 1
+               green         -> pin 2                     orange          -> pin 2
+               stripe orange -> pin 3                     stripe green    -> pin 3
+               blue          -> pin 4                     blue            -> pin 4  
+               stripe blue   -> pin 5                     stripe blue     -> pin 5   
+               orange        -> pin 6                     green           -> pin 6  
+               stripe brown  -> pin 7                     stripe brown    -> pin 7  
+               brown         -> pin 8                     brown           -> pin 8
 
     <b><i>Ethernet Straight-Through</i></b> - both ends of the cable are T568-A, or T568-B -- both ends are the same
          -> link Host to Network Device
@@ -170,14 +179,48 @@
     <b><i>Ethernet Crossover</i></b>        - one end T568A and the other T568B; used for Host-Host, Swith-Switch, or Router-Router communication 
          -> link between 2 of the same network devices
 
+         crossover swaps the transmit and the receive on the ends, 1 is a transmit end, the other is a receive end
+
     <b><i>Rollover (Cisco)</i></b>          - Cisco proprietary wiring; 
          -> host serial port to Router / Switch Console Port using an adapter  
 <h3>4.5 Fiber-Optic Cabling</h3>
 <h4>4.5.1 Properties of Fiber-Optic Cabling</h4>
+       - very fast - ideal form many networking scenarios
+       - transmits over longer distance at higher bandwidth than other media 
+       - immune to EMI/RFI 
+       - Uses laser or LED to encode bits as pulses of light with minimum signal loss
 <h4>4.5.2 Types of Fiber Media</h4>
+       <b>SMF Single Mode Fiber</b> - small core, uses laser, long distance application 
+
+       <b>MMF Multimode Fiber</b> - larger core, uses LEDs transmitted at different angles
+              up to 10Gbps over 550 meters
+
+     <b>Dispersion</b> - spreading of light pulse over time; increased loss of signal strength         
+      MMF has greater Dispersion than SMF 
+      SMF has less loss over time
 <h4>4.5.3 Fiber-Optic Cabling Usage</h4>
+      <b>Enterprise Networks</b> - backbone cabling and interconnecting infrastructure devices 
+
+      <b>Fiber to the Home (FTTH)</b> - always-on broadband for home and small office 
+
+      <b>Long Haul Networks</b> - used by service providers to connect cities and countries 
+
+      <b>Submarine Cable Networks</b> - provides reliable high-speed / higg-capacity solutions capable of survivign harsh undersea environments
+
+     this course will focus on <i>Enterprise Networks</i> 
 <h4>4.5.4 Fiber-Optic Connectors</h4>
+       Fiber is a <b><i>'half duplex'</i></b> transmission media --- can only transmit or receive at 1 time 
+        ST (Straight Tip) connector - push and twist, looks similar to coaxial connection
+        
+        Subscriber Connector (SC) - largish connector - often used in home theater devices 
+
+        Lucent Connector / Simplex Connector - has the external push release tab, smaller and more common today 
+
+        Duplex Multimode LC Connector - 2 LC connectors per end (1 wire to transmit, 1 wire to receive)
+            -- allows fiber connection to be duplex by having a dedicated transmit and receive connection to a device
+         Duplex LC connector is about the same size as an RJ-45 port and some devices let you swap from copper to fiber by repalcing a port on the device   
 <h4>4.5.5 Fiber Patch Cords</h4>
+        have to make certain that cable has the correct SMC or MMC for the device it is connecting to
 <h4>4.5.6 Fiber versus Copper</h4>
 
 <h3>4.6 Wireless Media</h3>
