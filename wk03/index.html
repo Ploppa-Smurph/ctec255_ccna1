@@ -139,10 +139,39 @@
 
 <h3>4.4 UTP Cabling</h3>
 <h4>4.4.1 Properties of UTP Cabling</h4>
+        each UTP cable has 4 twisted pairs = 8 wires total
+            - orange / striped orange
+            - blue / striped blue 
+            - green / striped green
+            - brown / striped brown
+
+     UTP limits <i>'crosstalk'</i>:
+       - Cancellation - each wire in the pair uses opposite polarity (1 wire is negative and 1 positive)
+       - Variation    - the twists per foot of each wire is varied as to limit crosstalk amongst the wires in the cable 
       
 <h4>4.4.2 UTP Cabling Standards and Connectors</h4>
-<h4>4.4.3 Straight-Through and Crossover UTP Cables</h4>
+        UTP standars are established by TIA/EIA and deal with: 
+          - cable length
+          - connectors
+          - termination of cable
 
+        IEEE establishes the Electrical Standards for the cable
+          - Cat 3 (telephone - not twisted pair)
+          - Cat 5 (UTP)
+          - Cat 6 / Cat 7 (faster UTP)
+
+        RJ-45 connector -- pin 1 on left hand side / pin 8 on far right (tab facing down)
+<h4>4.4.3 Straight-Through and Crossover UTP Cables</h4>
+        T568-A or T568-B  (T568-B is more common) 
+
+    <b><i>Ethernet Straight-Through</i></b> - both ends of the cable are T568-A, or T568-B -- both ends are the same
+         -> link Host to Network Device
+
+    <b><i>Ethernet Crossover</i></b>        - one end T568A and the other T568B; used for Host-Host, Swith-Switch, or Router-Router communication 
+         -> link between 2 of the same network devices
+
+    <b><i>Rollover (Cisco)</i></b>          - Cisco proprietary wiring; 
+         -> host serial port to Router / Switch Console Port using an adapter  
 <h3>4.5 Fiber-Optic Cabling</h3>
 <h4>4.5.1 Properties of Fiber-Optic Cabling</h4>
 <h4>4.5.2 Types of Fiber Media</h4>
