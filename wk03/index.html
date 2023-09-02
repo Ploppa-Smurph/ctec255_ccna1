@@ -20,25 +20,126 @@
      - Wireless Media
 <h3>4.1 Purpose of the Physical Layer</h3>
 <h4>4.1.1 Physical Connection</h4>
-<h4>4.1.2 Physical Layer</h4>
+     physical connection from an outside network to a local network is established
+       a physical connection can be cabling or wireless (radio waves) 
 
+     - wired networks have cabling physically plugged into shared switches
+     
+     - wireless network no cables - uses radio waves to attach to wireless router or wireless access point
+
+    <b>Network Interface Card (NIC)</b> - Ethernet or Wireless (WLAN) or both 
+<h4>4.1.2 Physical Layer</h4>
+      the Physical Layer takes the 'Completed Frame' from the DataLink Layer (Layer 2) and <b><i>Encodes</i></b> 
+        the packet into signals and transmits the <i>Frame</i> over local media
+
+      the Physical layer is the LAST step of the encapsulation process and the FIRST step of the re-encapsulation process 
+     
 <h3>4.2 Physical Layer Characteristics</h3>
 <h4>4.2.1 Physical Layer Standards</h4>
+      Standards address 3 funcitonal areas:
+        - Physical Components
+        - Encoding
+        - Signaling
+
+    Physical Layer Standards (Level 1 and some Level 2) are built into the hardware and are governed by various organizations
+        - IEEE
+        - ANSI
+        - ISO
+        - EIA/TIA
+
+    ** conversely TCP/IP (some Layer 2 - Layer 7) standards are implemented at the <i>Software level</i> and governed by the IETF 
 <h4>4.2.2 Physical Components</h4>
+      Hardware Devices
+      Cabling Media
+      Connectors
+      NICS 
+      Interfaces
+
+      all under the standards of the Physical Layer
 <h4>4.2.3 Encoding</h4>
+       <b>Encoding</b> - converts the stream of bits into a format recognizable byt the next device in the network 
+
+       ex: of encoding: 
+            - Manchester (0 in the valley, 1 at the top of a square wave) - voltage over time (getting phased out because it is too slow for modern processes)
+            - 4B/5B 
+            - 8B/10B
 <h4>4.2.4 Signaling</h4>
+        signaling is how the bit values are represented on the physical medium 
+         signaling varies by the type of medium used
+
+         Copper Cable - clunky square wave representation of voltage over time
+         Fiber Optic  - light pulse over period of time 
+         Microwave over Wireless: 
+            Digital Signal - regular boxy square wave
+            AM             - large fat waves 
+            FM             - tighter waves with more steep peaks and valleys
+            PM             - extremely ordered wave grouping with regular repeat, wave with some short peaks
 <h4>4.2.5 Bandwidth</h4>
+        Bandwidth is the capacity at which a medium can carry data
+
+        - <b><i>Digital Bandwidth</i></b> - mesures amount of data flowing from one place to another in a give amount of time 
+              bits transmitted / second 
+
+        - the properties of the physical media, current technologies, and laws of physics play a role in determining available bandwidth
+
+        <b>bps</b>    = Bits per second
+        <b>Kbps</b>   = Kilobits per second 
+        <b>Mbps</b>   = Megabits per second
+        <b>Gbps</b>   = Gigabits per second
+        <b>Tbps</b>   = Terabits per second
 <h4>4.2.6 Bandwidth Terminology</h4>
+      <b>Latency</b> - amount of time, including delays, for data to travel 
+      
+      <b>Throughput</b> - measure of transfer of bits across media over a given period
+      
+      <b>Goodput</b> - measure of usable data transferred over a given period
+          <i>Goodput = Throughput - Traffic Overhead</i>   
 
 <h3>4.3 Copper Cabling</h3>
 <h4>4.3.1 Characteristics of Copper Cabling</h4>
+        most common and inexpensive cabling medium for networking 
+           includes both Coaxial cable and Cat5, Cat6 style RJ-45 connector cabling 
+
+      Limitations:
+        - Attenuation - longer the electrical signals have to travel, the weaker they get.
+        
+        - electrical signal is susceptible to interference for EMI (Electro Magnetic Interference) or 
+             RFI (Radio Frequency Interference)
+
+      Mitigations: 
+        - Adherence to cable length limits mitigates attenuation
+        - some cables are shieled to mitigate EMI and RFI 
+        - some cable mitigate 'Crosstalk' by twisting opposing circuit pair wires together       
 <h4>4.3.2 Types of Copper Cabling</h4>
-<h4>4.3.3 Unshielded Twisted-Pair</h4>
-<h4>4.3.4 Shielded Twisted-Pair</h4>
+      <b>Coaxial</b> -
+
+      <b>Cat5/Cat6/Cat7</b> - RJ-45 connector on end - 8 wires - into 4 twisted pairs
+      <b>UTP Unshielded Twisted Pair</b> - most common, less expensive then shielded
+      <b>STP Shieleded Twisted Pair</b> - needed for some situations and to adhere to certain standards
+<h4>4.3.3 Unshielded Twisted-Pair (UTP)</h4>
+        - Terminated with RJ-45 connector
+        - used to interconnect hosts with intermediary network devices
+
+        Key Characteristics of UTP:
+        1) outer jacket protects copper wire from physical damage
+        2) twisted pair protects from signal interference
+        3) color-coded plastic insulation electracially isolates wires and identifies each pair
+<h4>4.3.4 Shielded Twisted-Pair (STP)</h4>
+       has an outer buffer shield (braided foil) to protect from EMI/RFI  
+            - better noise protection than UTP
+            - more expensive 
+            - more difficult to install than UTP        
 <h4>4.3.5 Coaxial Cable</h4>
+       solid copper core -> thick plastic/teflon insulation -> woven copper braid / foil weave -> thick outer jacket 
+        
+       3 major connector types: 
+         <i>BNC</i>    - push and twist on 
+         <i>N Type</i> - similar to F type, not widely used, screw on
+         <i>F Type</i> - screw on (like what I am used to)
 
 <h3>4.4 UTP Cabling</h3>
 <h4>4.4.1 Properties of UTP Cabling</h4>
+      
 <h4>4.4.2 UTP Cabling Standards and Connectors</h4>
 <h4>4.4.3 Straight-Through and Crossover UTP Cables</h4>
 
