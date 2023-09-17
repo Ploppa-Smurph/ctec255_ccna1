@@ -28,6 +28,14 @@
      - LLC (Logical Link Control) - communicates between networking software, at upper layers, and device hardware, at lowest layers
      - MAC (Media Access Control) - handles data encapsulation and media access control 
 <h3>Providing Access to Media</h3>
+    Router performs four basic layer 2 functions at each hop:
+     - Accepts a frame from the network medium
+     - De-encapsulates the frame to expose the encapsulated packet.
+     - Re-encapsulates the packet into a new frame.
+     - Forwards the new frame on the medium of the next network segment
+
+     ** packets exchanged between nodes may experience many data link layer (layer 2) and media transitions **
+          *** the MAC destination and source information changes at each hop; the IP Source and Destination information will remain the same throughout ***
 
 <h3></h3>
 <h2>07 - Ethernet Switching</h2>    
