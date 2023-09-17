@@ -195,10 +195,30 @@
       4) Type / Length = 2 bytes; Type of frame, Length of frame
       5) Data = 45 - 1500 bytes; data packet / payload
       6) FCS = 4 bytes; error correction
+<h3>6.2 - MAC Address (Media Access Control)</h3>
+            a 48-bit binary value expressed using 12 hexadecimal values
+                - given that 8-bits (1 byte) is a common binary grouping, this can be represented in hexadecimal in the range 00 to FF
+                 -- use the leading 0 when expressing hex MAC addresses
+                 -- hex numbers are often represented with '0x' preceeding the value. ex: 0x73; this denotes the value is hexadecimal (not decimal)
+                   -- hex can also be denoted by subscript 16, or 'H' following the value. ex: 73H to specify a hexvalue
+<h4>Ethernet MAC Address</h4>
+   MAC address is 48-bits / 6 bytes in length.
+
+   Organizational Unique Identifier - 1st 3 bytes of MAC address; all NIC connected devices from a manufacturer will have the same 3 byte OUI (eg: MSI will have their own, Apple will have a unique #, Sony will all have the same OUI, etc...)
+
+   Vendor Assigned - 2nd 3 bytes of MAC address; each device has a unique value here, the vendor OUI will be the same, the Assigned value will be unique per device.
+<h4>Frame Processing</h4>
+    when a device forwards a message to an Ethernet network the Ethernet header must include the 'Destination' MAC address and the 'Source' MAC address
+    
+    when a NIC receives an Ethernet frame, it examine the destination MAC address to see if it matches the physical MAC address stored in RAM
+      - if there is a match to a MAC address stored in RAM, then the device passes the frame up the OSI layers wher de-encapsulation takes place
+
+    Workstations, Servers, Printers, Mobile Devices, Routers, and more all have MAC addresses assigned by Ethernet NIC
 <h4></h4>
-<h3>6.2 - </h3>
-<h3></h3>
-<h3></h3>
+<h4></h4>
+<h4></h4>
+<h3>6.3 - </h3>
+<h3>6.4 - </h3>
 
 </pre>
 </body>
