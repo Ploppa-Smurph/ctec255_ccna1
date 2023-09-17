@@ -158,7 +158,22 @@
         802.2 = Ethernet; FastEthernet, Gigabit Ethernet, etc... 
         802.11 = Wireless, wireless standards, 802.11a; 802.11g, etc.. 
         802.15 = WPAN (personal network); Bluetooth, RFID, etc... 
-<h4></h4>
+<h4>MAC Sublayer</h4>
+     responsible for data encapsulation and accessing the media
+
+    <b>Data Encapsulation</b> 
+        IEEE 802.3 data encapsulation includes: 
+         - <b><i>Ethernet Frame</i></b> - internal structure of Ethernet Frame
+         - <b><i>Ethernet Addressing</i></b> - includes the destination and source MAC to deliver Ethernet frame from Ethernet NIC to Ethernet NIC on the same LAN
+         - <b><i>Ethernet Error Detection</i></b> - Ethernet frame includes a frame check sequence (FCS) trailer used for error detection
+
+    <b>Media Access</b> - the IEEE 802.3 MAC sublayer includes specifications for different Ethernet communications standards over various types of media including copper and fiber.
+       Legacy Ethernet using BUS topology or hubs, are shared, half-duplex. 
+       
+       Ethernet over half-duplex uses 'contention-based' access method;
+         utilizes <b><i>CSMA/CD</i></b> -- collision detection 
+
+       Modern LANs use switches which operate full-duplex and do not require CSMA/CD
 <h4></h4>
 <h4></h4>
 <h3>6.2 - </h3>
