@@ -55,11 +55,42 @@
      physical p2p connects 2 nodes. 
       all data can only travel to or from the 2 nodes
 <h4>LAN Topologies</h4>
-    Star Topology - 
-    Extended Star -
-    Bus Topology - 
-    Ring Topology - 
-<h3>6.03 - </h3>  
+     - Star Topology - 
+     - Extended Star -
+     - Bus Topology - legacy, requires terminators / reflection points to keep signal from bouncing back and forth on the line
+     - Ring Topology -
+<h4>Half and Full Duplex Communication</h4> 
+    - Half Duplex = only 1 device can send or receive at a time (ex: like a walkie-talkie)
+
+    - Full Duplex = both devices simultaneously transmit and receive
+         -- ethernet switches operate in full-duplex mode.
+<h4>Access Control Methods</h4>         
+    - <b>Contention-based Access</b>
+       - All nodes operate half-duplex
+      ex: 1) CSMA/CD (carrier sense multiple access with collision detection) - used on legacy bus-topology Ethernet
+          2) CSMA/CA (carrier sense multiple access with collision avoidance) - used on Wireless LANs
+
+    - <b>Controlled Access</b>
+         - Deterministic access where each node has its own time on the medium
+         - Used on legacy networks such as Token Ring and ARCNET
+<h4>Contention-Based Access - CSMA/CD</h4>         
+    - used by legacy Ethernet LANs
+    - operates half-duplex (only 1 device sends or receives at a time)
+    - collision detection governs when a device can send and what happens if multiple devices send at the same time
+
+   <b>CSMA/CD collision detection process:</b>
+    1) devices transmitting simultaneously will result in a signal collision on the shared media
+    2) devices detect collision
+    3) devices wait a random period of time before retransmitting data
+<h4>Contention-Based Access - CSMA/CA</h4>    
+    - used by IEEE 802.11 WLANs
+    - operates half-duplex
+    - uses collision avoidance process to govern when a device can send and what happens if multiple devices send at the same time
+
+    <b>CSMA/CA collision avoidance process:</b>
+    1) when transmitting, devices include time duration needed for the transmission
+    2) all devices on shared medium receive time duration information and know how long the medium will be unavailable.
+<h3>6.03 - Link Frame</h3>  
 <h4></h4>   
 <h4></h4>
 <h4></h4>
