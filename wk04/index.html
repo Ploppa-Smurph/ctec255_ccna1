@@ -174,7 +174,27 @@
          utilizes <b><i>CSMA/CD</i></b> -- collision detection 
 
        Modern LANs use switches which operate full-duplex and do not require CSMA/CD
-<h4></h4>
+
+       802.3u = Fast Ethernet
+       802.3z = Gigabit over Fiber
+       802.3ab = Gigabit over Copper
+       802.3ae = 10 Gigabit over Fiber
+        those are the common standards
+<h4>Ethernet Frame Fields</h4>
+     minimum Ethernet Frame size = 64 bytes
+     maximum Ethernet frame size = 1518 bytes 
+       ** 'Preamble' size is not included when describing the size of the frame. **  
+
+     - any frame less than 64 bytes is considered a 'Collision Fragment' / 'Runt Frame' and is automatically discarded.
+     - Frames more than 1500 bytes are considered 'jumbo' / 'baby giant frames'
+
+     <b>Ethernet Frame Composition:</b>
+      1) Preamble = 8 bytes; does not count toward Frame size
+      2) Destination MAC = 6 bytes; destination address
+      3) Source MAC = 6 bytes; source address
+      4) Type / Length = 2 bytes; Type of frame, Length of frame
+      5) Data = 45 - 1500 bytes; data packet / payload
+      6) FCS = 4 bytes; error correction
 <h4></h4>
 <h3>6.2 - </h3>
 <h3></h3>
