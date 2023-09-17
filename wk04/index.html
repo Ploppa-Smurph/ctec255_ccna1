@@ -100,15 +100,68 @@
       ** the fields of the header and trailer vary depending on the layer protocol
 
       the amount of control information carried in the frame varies according to access control information and logical topology
-<h4></h4>
-<h4></h4>
-<h4></h4>
-<h3>6.04 - </h3>     
-<h4></h4>
-<h4></h4>
+<h4>Frame Fields</h4>
+     <b>Header</b>  - <i>Frame Start</i> - identifies beginning of frame
+                    - <i>Addressing</i> - indicates source and destination nodes
+                    - <i>Type</i> - identifies encapsulated Layer 3 protocol
+                    - <i>Control</i> - identifies flow control service
+     
+     <b>Trailer</b> - <i>Error Detection</i> - used to determine transmission errors               
+                    - <i>Frame Stop</i> - identifies end of frame
+<h4>Layer 2 Addresses</h4>
+     aka 'Physical Address' -- layer 2 address information is contained in the frame header.
+      -- used for local delivery of a frame on the link. 
+
+    Layer 2 address is updated by each device that forwards the frame.
+      
+    Destination NIC (Physical Address) -> Source NIC (Physical Address) -- the MAC information changes each time the frame is handed off
+      ** the layer 3 IP information stays the same throughout the transmission (Source IP -> Destination IP) 
+<h4>LAN and WAN Frames</h4>
+      Logical Topology and Physical Media determine the data link protocol used: 
+         - Ethernet
+         - 802.11 Wireless
+         - Point-to-Point (p2p; PPP)
+         - High-Level Data Link Control (HDLC)
+         - Frame-Relay
+<h3>6.04 - Review</h3>     
+    - Data Link layer of the OSI model (Layer 2) prepares network data for the physical network.
+    - Data Link layer is responsible for network interface card (NIC) to NIC communication.
+    - IEEE 802 LAN/MAN data link layer consists of 2 sublayers: LLC and MAC.
+    - 2 types of topologies used in LAN and WAN networks are 'Physical' and 'Logical'.
+    - 2 common types of physical WAN topologies are: Point-to-Point, Hub and Spoke, and Mesh.
+    - Half-duplex communications exchange data in one direction at a time.
+    - Full-duplex sends and receives data simultaneously.
+    - Contention-based multi-access networks, all nodes are operating in half-duplex.
+    - Contention-based multi-access networks included: CSMA/CD for bus-topology Ethernet LANS
+                                                       CSMA/CA for WLANs
+    - Data Link frame has 3 basic parts: Header, Data, Trailer
+    - Frame fields include: Frame Start, Addressing, Type, Control, Data, Error Detection, and Frame Stop.
+    - Data Link addresses are known as 'Physical Addresses'.
+    - Data Link addresses are only used for link local delivery of frames.
+
 <h2>07 - Ethernet Switching</h2>    
-<h3></h3>
-<h3></h3>
+      Ethernet Switches that rely on MAC addresses and MAC address tables are Layer 2 switches - physical layer switches
+<h3>6.1 - Ethernet Frames</h3>
+<h4>Ethernet Encapsulation</h4>
+     Ethernet operates in the data link and physical layer (Layer 2; Layer 1)
+
+     defined by the IEEE 802.2 & 802.3 standards 
+
+     802.2 = Local Logical Control sublayer of Layer 2 (Data Link Layer)
+     802.3 = MAC and Physical Layer (MAC sublayer of Layer 2 and Layer 1 [physical layer])
+<h4>Data Link Sublayers</h4>
+      Ethernet uses 2 sublayers of the Data Link Layer (layer 2 of OSI)
+        LLC (Local Logical Control) - IEEE 802.2 - places information in the frame to identify which network layer protocol is used for the frame 
+
+        MAC (Media Access Control) - responsible for data encapsulation and media access control; provides data link layer addressing
+
+        802.2 = Ethernet; FastEthernet, Gigabit Ethernet, etc... 
+        802.11 = Wireless, wireless standards, 802.11a; 802.11g, etc.. 
+        802.15 = WPAN (personal network); Bluetooth, RFID, etc... 
+<h4></h4>
+<h4></h4>
+<h4></h4>
+<h3>6.2 - </h3>
 <h3></h3>
 <h3></h3>
 
