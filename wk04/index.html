@@ -8,10 +8,27 @@
 <body>
 <h1>CTEC 255 wk 04: Ch 06 - Data Link Layer; Ch 07 - Ethernet Switching</h1>    
 <pre>
-<h2>06 - Data Link Layer</h2>    
-<h3></h3>
-<h3></h3>
-<h3></h3>
+<h2>06 - Data Link Layer (Layer 02 OSI model)</h2>    
+<h3>Purpose of Data Link Layer</h3>
+    2 parts: LLC (Logical Link Control) -- deals with upper layers
+             MAC layer                  -- deals with layer 1 (physical layer)
+     Data Link Layer - responsible for communication between end-device NIC (network interface card)
+                     - allows upper layer protocols access to physical media
+                     - <b><i>encapsulates</i></b> Layer 3 packets (IPv4 and IPv6) into Layer 2 'Frames'
+                     - performs error detection and rejects corrupt frames    
+    Layer 2 Headers have <i>Destination</i> then <i>Source</i>
+    Layer 3 Headers have <i>Source IP</i> then <i>Destination IP</i> 
+<h3>IEEE 802 LAN/MAN Data Link Sublayers</h3>
+    LLC Sublayer - 802.2
+    Ethernet     - 802.3   - ethernet standards
+    WLAN         - 802.11  - wireless standards 
+    WPAN         - 802.15  - personal area standards (Bluetooth, RFID)
+
+   Data Link Layer consists of 2 sublayers 
+     - LLC (Logical Link Control) - communicates between networking software, at upper layers, and device hardware, at lowest layers
+     - MAC (Media Access Control) - handles data encapsulation and media access control 
+<h3>Providing Access to Media</h3>
+
 <h3></h3>
 <h2>07 - Ethernet Switching</h2>    
 <h3></h3>
