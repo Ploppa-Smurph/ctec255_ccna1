@@ -113,22 +113,31 @@
         before 172.16.20.0. Valid host addresses for this network range from 172.16.16.1-172.16.19.254, making 172.16.19.255 the broadcast address.</i>
     
 <b>25) Refer to the exhibit. Considering the addresses already used and having to remain within the 10.16.10.0/24 network range, which subnet address could be assigned to the network containing 25 hosts?</b>
-    <i>10.16.10.64/27     - Addresses 10.16.10.0 through 10.16.10.63 are taken for the leftmost network. Addresses 10.16.10.192 through 10.16.10.207 are used by the center network.The address space from 208-255 assumes a /28 mask, which does not allow enough host bits to accommodate 25 host addresses.The address ranges that are available include 10.16.10.64/26 and10.16.10.128/26. To accommodate 25 hosts, 5 host bits are needed, so a /27 mask is necessary. Four possible /27 subnets could be created from the available addresses between 10.16.10.64 and 10.16.10.191:</i>
+    <i>10.16.10.64/27     - Addresses 10.16.10.0 through 10.16.10.63 are taken for the leftmost network. Addresses 10.16.10.192 through 10.16.10.207 are used by the center network.The address space from 208-255 assumes a /28 mask, 
+        which does not allow enough host bits to accommodate 25 host addresses.The address ranges that are available include 10.16.10.64/26 and10.16.10.128/26. To accommodate 25 hosts, 5 host bits are needed, so a /27 mask is necessary. 
+        Four possible /27 subnets could be created from the available addresses between 10.16.10.64 and 10.16.10.191:</i>
     
 <b>26) What three blocks of addresses are defined by RFC 1918 for private network use? (Choose three.)</b>
     <i>10.0.0.0/8; 172.16.0.0./12; 192.168.0.0/16    -- RFC 1918, Address Allocation for Private Internets, defines three blocks of IPv4 address for private networks that should not be routable on the public Internet.</i>
     
-<b>27) </b>
-    <i> </i>
+<b>27) Match each IPv4 address to the appropriate address category. (Not all options are used.)</b>
+    <i>192.168.100.161/125  -  host address / target 
+       192.168.1.191/26     -  broadcast / target 
+       10.10.10.128/25      -  network / target
+       224.10.0.254/24      -    
+       203.0.113.100/24     -  host / target
+       172.110.12.64/28     -  network / target 
+       10.0.0.159/27        -  broadcast / target</i>
     
-<b>28) </b>
-    <i> </i>
+<b>28) What is the usable number of host IP addresses on a network that has a /26 mask?</b>
+    <i>62 /i>
 
-<b>29) </b>
-    <i> </i>
+<b>29) What is the prefix length notation for the subnet mask 255.255.255.224?</b>
+    <i>/27 </i>
 
-<b>30) </b>
-    <i> </i>
+<b>30) Which subnet would include the address 192.168.1.96 as a usable host address?</b>
+    <i>192.168.1.64/26   - For the subnet of 192.168.1.64/26, there are 6 bits for host addresses, yielding 64 possible addresses. However, the first and last subnets are the network and broadcast addresses for this subnet. 
+        Therefore, the range of host addresses for this subnet is 192.168.1.65 to 192.168.1.126. The other subnets do not contain the address 192.168.1.96 as a valid host address.</i>
     
 <b>31) </b>
     <i> </i>
