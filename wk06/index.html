@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC 255 wk 06: Lesson 11 - 13 IP Addressing</title>
+</head>
+<body>
+<h1>CTEC 255 wk 06: Lesson 11 - 13 IP Add addressing</h1>
+<pre>
+<h2>Lesson 11: </h2>
+<h2>Lesson 12: </h2>
+<h2>Lesson 13: </h2>
+<h2>Review Lesson 11-13</h2>
+<b>01) Which of these addresses is the shortest abbreviation for the IP address: 
+       3FFE:1044:0000:0000:00AB:0000:0000:0057?</b>
+    <i>3FFE:1044:0:0:AB::57 
+        1. Omit any leading 0s (zeros) in any hextet.
+        2. Replace any single, contiguous string of one or more 16-bit hextets consisting of all zeros with a double colon (::) .
+        3. The double colon (::) can only be used once within an address.</i>
+
+<b>02) Which IPv6 prefix is reserved for communication between devices on the same link?</b>
+    <i>FE80::/10</i>
+    
+<b>03) Match the IPv6 address with the IPv6 address type. (Not all options are used.)</b>
+    <i>Solicited node multicast   =   FF02::1:FFAE:F85F 
+       Global Unicast             =   2001:DB8
+       All Node Multicast         =   FF02::1 
+       Loopback                   =   ::1    </i>
+    
+<b>04) Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?</b>
+    <i>SLAAC -- Using stateless address autoconfiguration (SLAAC), a PC can solicit a router and receive the prefix length of the network. From this information the PC can then create its own IPv6 global unicast address.</i>
+    
+<b>05) What is used in the EUI-64 process to create an IPv6 interface ID on an IPv6 enabled interface?</b>
+    <i>the MAC address of the IPv6 enabled interface -  The EUI-64 process uses the MAC address of an interface to construct an interface ID (IID). Because the MAC address is only 48 bits in length, 
+        16 additional bits (FF:FE) must be added to the MAC address to create the full 64-bit interface ID.</i>
+        
+<b>06) Which type of IPv6 address refers to any unicast address that is assigned to multiple hosts?</b>
+    <i>Anycast -  The IPv6 specifications include anycast addresses. An anycast address is any unicast IPv6 address that is assigned to multiple devices.</i>
+
+<b>07) A network administrator has received the IPv6 prefix 2001:DB8::/48 for subnetting. Assuming the administrator does not subnet into the interface ID portion of the address space, how many subnets can the administrator create from the /48 prefix?</b>
+    <i>65536 -  With a network prefix of 48, there will be 16 bits available for subnetting because the interface ID starts at bit 64. Sixteen bits will yield 65536 subnets. </i>
+    
+<b>08) Three methods allow IPv6 and IPv4 to co-exist. Match each method with its description. (Not all options are used.)</b>
+    <i>IPv4 and IPv6 packets coexist in same network = dual-stack
+       IPv6 packet transported in IPv4 packet        = tunneling
+       IPv6 packets are converted with IPv4 packets  = translation </i>
+    
+<b>09) Which protocol supports Stateless Address Autoconfiguration (SLAAC) for dynamic assignment of IPv6 addresses to a host?</b>
+    <i>ICMPv6 -  SLAAC uses ICMPv6 messages when dynamically assigning an IPv6 address to a host. DHCPv6 is an alternate method of assigning an IPv6 addresses to a host. ARPv6 does not exist. 
+        Neighbor Discovery Protocol (NDP) provides the functionality of ARP for IPv6 networks. UDP is the transport layer protocol used by DHCPv6.</i>
+    
+<b>10) What are two types of IPv6 unicast addresses? (Choose two.)</b>
+    <i>loopback & link-local;   Multicast, anycast, and unicast are types of IPv6 addresses. There is no broadcast address in IPv6. Loopback and link-local are specific types of unicast addresses. </i>
+
+<b>11) Consider the following range of addresses:
+    2001:0DB8:BC15:00A0:0000::
+    2001:0DB8:BC15:00A1:0000::
+    2001:0DB8:BC15:00A2:0000::
+    ...
+    2001:0DB8:BC15:00AF:0000::</b>
+    <i>/60  ??</i>
+
+<b>12) Refer to the exhibit. A company is deploying an IPv6 addressing scheme for its network. The company design document indicates that the subnet portion of the IPv6 addresses is used for the new hierarchical network design, 
+      with the s ite subsection to represent multiple geographical sites of the company, the s ub-site section to represent multiple campuses at each site, and the s ubnet section to indicate each network segment separated by routers. With such a scheme, what is the maximum number of subnets achieved per sub-site ?</b>
+    <i>16  -  Because only one hexadecimal character is used to represent the subnet, that one character can represent 16 different values 0 through F.</i>
+    
+<b>13) A host is transmitting a multicast. Which host or hosts will receive it?</b>
+    <i>a specially defined group of hosts. </i>
+    
+<b>14) A technician uses the ping 127.0.0.1 command. What is the technician testing?</b>
+    <i>the TCP/IP stack on a network host.</i>
+    
+<b>15) Which protocol is used by the traceroute command to send and receive echo-requests and echo-replies?</b>
+    <i>ICMP -  Traceroute uses the ICMP (Internet Control Message Protocol) to send and receive echo-request and echo-reply messages.</i>
+
+<b>16) Refer to the exhibit. An administrator is trying to troubleshoot connectivity between PC1 and PC2 and uses the tracert command from PC1 to do it. Based on the displayed output, where should the administrator begin troubleshooting?</b>
+    <i>R1 </i>
+
+<b>17) Which is the compressed format of the IPv6 address fe80:09ea:0000:2200:0000:0000:0fe0:0290?</b>
+    <i>fe80:9ea:0:2200::fe0:290 </i>
+    
+<b>18) A company has a network address of 192.168.1.64 with a subnet mask of 255.255.255.192. The company wants to create two subnetworks that would contain 10 hosts and 18 hosts respectively. Which two networks would achieve that? (Choose two.)</b>
+    <i>192.168.1.64/27
+        192.168.1.96/28 
+        Subnet 192.168.1.64 /27 has 5 bits that are allocated for host addresses and therefore will be able to support 32 addresses, but only 30 valid host IP addresses. Subnet 192.168.1.96/28 
+        has 4 bits for host addresses and will be able to support 16 addresses, but only 14 valid host IP addresses.</i>
+    
+<b>19) How many host addresses are available on the network 172.16.128.0 with a subnet mask of 255.255.252.0?</b>
+    <i>1022 -  A mask of 255.255.252.0 is equal to a prefix of /22. A /22 prefix provides 22 bits for the network portion and leaves 10 bits for the host portion. The 10 bits in the host portion will provide 1022 usable IP addresses (210 – 2 = 1022).</i>
+    
+<b>20) A message is sent to all hosts on a remote network. Which type of message is it?</b>
+    <i>directed broadcast   - A directed broadcast is a message sent to all hosts on a specific network. It is useful for sending a broadcast to all hosts on a nonlocal network. A multicast message is a message sent to a selected group of hosts that are part of a subscribing multicast group. 
+        A limited broadcast is used for a communication that is limited to the hosts on the local network. A unicast message is a message sent from one host to another.</i>
+
+<b>21) A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?</b>
+    <i>255.255.255.128    -  The subnet mask of 255.255.255.0 has 8 host bits. The mask of 255.255.255.128 results in 7 host bits. The mask of 255.255.255.224 has 5 host bits. Finally, 255.255.255.240 represents 4 host bits.</i>
+
+<b>22) A high school in New York (school A) is using videoconferencing technology to establish student interactions with another high school (school B) in Russia. The videoconferencing is conducted between two end devices through the Internet. The network administrator of school A configures 
+    the end device with the IP address 209.165.201.10. The administrator sends a request for the IP address for the end device in school B and the response is 192.168.25.10. Neither school is using a VPN. The administrator knows immediately that this IP will not work. Why?</b>
+    <i>This is a private IP address </i>
+    
+<b>23) Match the subnetwork to a host address that would be included within the subnetwork. (Not all options are used.)</b>
+    <i>192.168.1.32/27   =   192.168.1.48
+       192.168.1.64/27   =   192.168.1.68
+       192.168.1.96/27   =   192.168.1.121
+       Subnet 192.168.1.32/27 will have a valid host range from 192.168.1.33 – 192.168.1.62 with the broadcast address as 192.168.1.63
+       Subnet 192.168.1.64/27 will have a valid host range from 192.168.1.65 – 192.168.1.94 with the broadcast address as 192.168.1.95
+       Subnet 192.168.1.96/27 will have a valid host range from 192.168.1.97 – 192.168.1.126 with the broadcast address as 192.168.1.127</i>
+    
+<b>24) Refer to the exhibit. An administrator must send a message to everyone on the router A network. What is the broadcast address for network 172.16.16.0/22?</b>
+    <i>172.16.19.255   - The 172.16.16.0/22 network has 22 bits in the network portion and 10 bits in the host portion. Converting the network address to binary yields a subnet mask of 255.255.252.0. The range of addresses in this network will end with the last address available 
+        before 172.16.20.0. Valid host addresses for this network range from 172.16.16.1-172.16.19.254, making 172.16.19.255 the broadcast address.</i>
+    
+<b>25) Refer to the exhibit. Considering the addresses already used and having to remain within the 10.16.10.0/24 network range, which subnet address could be assigned to the network containing 25 hosts?</b>
+    <i>10.16.10.64/27     - Addresses 10.16.10.0 through 10.16.10.63 are taken for the leftmost network. Addresses 10.16.10.192 through 10.16.10.207 are used by the center network.The address space from 208-255 assumes a /28 mask, which does not allow enough host bits to accommodate 25 host addresses.The address ranges that are available include 10.16.10.64/26 and10.16.10.128/26. To accommodate 25 hosts, 5 host bits are needed, so a /27 mask is necessary. Four possible /27 subnets could be created from the available addresses between 10.16.10.64 and 10.16.10.191:</i>
+    
+<b>26) What three blocks of addresses are defined by RFC 1918 for private network use? (Choose three.)</b>
+    <i>10.0.0.0/8; 172.16.0.0./12; 192.168.0.0/16    -- RFC 1918, Address Allocation for Private Internets, defines three blocks of IPv4 address for private networks that should not be routable on the public Internet.</i>
+    
+<b>27) </b>
+    <i> </i>
+    
+<b>28) </b>
+    <i> </i>
+
+<b>29) </b>
+    <i> </i>
+
+<b>30) </b>
+    <i> </i>
+    
+<b>31) </b>
+    <i> </i>
+    
+<b>32) </b>
+    <i> </i>
+    
+<b>33) </b>
+    <i> </i>
+
+</pre>    
+</body>
+</html>
